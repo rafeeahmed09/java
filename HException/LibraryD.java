@@ -22,7 +22,7 @@ class Library {
 }
 
 public class LibraryD {
-    public static void main(String[] args) {
+    public static void main(String[] args) {                                                                                                        
         Library library1 = new Library();
         library1.borrowBook(6);
     }

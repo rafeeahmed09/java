@@ -20,6 +20,6 @@ class Throw {
 public class ThrowD {
     public static void main(String[] args) {
         Throw library1 = new Throw();
-        library1.borrowBook(6);
+        library1.borrowBook(10);
     }
 }
