@@ -1,4 +1,4 @@
-package Object_Oriented_programming;
+package Object_Oriented_programmings;
 
 // create a class
 class Ins {
