@@ -44,7 +44,7 @@ class BankAccount {
 
 public class Encapsulation {
     public static void main(String[] args) {
-        BankAccount bank1 = new BankAccount(12345,12000.0);
+        BankAccount bank1 = new BankAccount(12345, 12000.0);
         System.out.println("Account Number: " + bank1.getAccountNumber());
         System.out.println("Balance: " + bank1.getBalance());
         bank1.deposit(400);
