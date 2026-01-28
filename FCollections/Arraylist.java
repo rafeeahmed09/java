@@ -4,10 +4,12 @@ import java.util.ArrayList;
 
 public class Arraylist {
     public static void main(String[] args) {
-        ArrayList<Integer> numbers = new ArrayList<>(); // initial capacity of 10 elements.  
-        numbers.add(1);
+        ArrayList<Integer> numbers = new ArrayList<>(); // initial capacity of 10 elements.
         numbers.add(2);
         numbers.add(3);
+        numbers.add(1);
+
+        
 
         System.out.println("All elements of Arraylist are printed \n");
         for (int i = 0; i < numbers.size(); i++) {
