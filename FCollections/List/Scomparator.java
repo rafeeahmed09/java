@@ -1,4 +1,4 @@
-package FCollections;
+package FCollections.List;
 
 import java.util.ArrayList;
 import java.util.Comparator;
