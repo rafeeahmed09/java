@@ -89,7 +89,7 @@ class Person {
         return "id: " + id + ", name: " + name;
     }
 }
-
+ 
 public class MHashmap {
     public static void main(String[] args) {
         HashMap<Person, String> map = new HashMap<>();
