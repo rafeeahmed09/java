@@ -47,9 +47,7 @@ public class Terminal_operations {
         System.out.println(str.chars().filter(x -> x == 'l').count());
 
 
-        List<String> List5 = Arrays.asList("alice", "bob", "charlie", "david");
-
-        
+             
     }
     
 }
