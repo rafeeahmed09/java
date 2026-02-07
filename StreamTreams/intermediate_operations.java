@@ -19,7 +19,17 @@ public class intermediate_operations {
 
         // 2. Map 
         List<String> list2 = Arrays.asList("neha", "ansh", "fiza","harsh");
-        Stream<String> mappedlist = list2.stream().map(x -> x.toUpperCase());
+        Stream<String> mappedlist = list2.stream().map(x -> x.toUpperCase());   
+        mappedlist.forEach(System.out::println);
+
+        // 3. Sorted
+        Stream<String> sortedlist = list2.stream().sorted();
+        System.out.println("Sorted list: ");
+        sortedlist.forEach(System.out::println);
+
+        // 4. Distinct 
+        System.out.println(list2.stream().distinct().count());
+        
 
     }
 }
