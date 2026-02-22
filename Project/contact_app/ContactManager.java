@@ -68,7 +68,7 @@ public class ContactManager {
                         break;
                     case 2:
                         System.out.print("Enter new Phone: ");
-                        c.setPhone(sc.nextDouble());
+                        c.setPhone(sc.nextLine());
                         break;
                     case 3:
                         System.out.print("Enter new Personal Email: ");
