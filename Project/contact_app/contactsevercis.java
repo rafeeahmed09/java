@@ -4,16 +4,18 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ContactJDBC {
-   public static void main(String[] args) {
-        String url = "jbc:mysql://localhost:3306/compay";
-        String username = "root";
-        String password = "1234567890";
+public class contactsevercis {
 
-        try(Connection conn = DriverManager.getConnection(url,username,password)){
-            System.out.println("Connected to the database");
-       }catch (SQLException e){
-            System.out.println("Connection failed " + e.getMessage());
+    private static String url = "jdbc:mysql://localhost:3306/compay?useSSL=false&serverTimezone=UTC";
+    private static  String user = "root";
+    private static String password = "1234567890";
+    public static void main(String[] args) {
+        
+        try (Connection conn = DriverManager.getConnection(url,user,password))
+             {
+
+        } catch (SQLException e) {
+            System.out.println("Connection failed: " + e.getMessage());
         }
     }
 }

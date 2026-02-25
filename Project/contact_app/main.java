@@ -43,9 +43,9 @@ public class main {
                     cm.viewAll();
                     break;
                 case "5":
-                    System.out.println("Enter name to update");
-                    String nametoupdata = sc.nextLine();
-                    // cm.update(sc.nextLine());
+                    System.out.println("Enter name to update:");
+                    String nameofupdata = sc.nextLine();
+                    cm.updata(nameofupdata, sc);
 
                 default:
                     System.out.println("Invalid  input");
