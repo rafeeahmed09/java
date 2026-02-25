@@ -3,21 +3,22 @@ package contact_app;
 import java.util.Scanner;
 
 public class main {
-    public static void main(String[] args) {
+    static void main(String[] args) {
         ContactManager cm = new ContactManager();
+        contactsJDBC cs = new contactsJDBC();
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.println("\n [1] Add \n [2] Search \n [3] Delete \n [4] view All \n [5] updata \n [6] exit");
-            System.err.println("Selection option");
+            System.out.println("Selection option");
             String choice = sc.nextLine();
             if (choice.equals("6")) {
                 break;
             }
             switch (choice) {
                 case "1":
-                    System.err.println("Enter you name : ");
+                    System.out.println("Enter you name : ");
                     String name = sc.nextLine();
-                    System.err.println("Enter you Phone : ");
+                    System.out.println("Enter you Phone : ");
                     String Phone = sc.nextLine();
                     System.out.println("Enter you  PersonalEmail");
                     String personalEmail = sc.nextLine();
