@@ -11,13 +11,19 @@ public class Synchronized {
 //         th.start();
 //         tr.start();
 
-        EvenAndOddNumber t = new  EvenAndOddNumber();
-        Thread th = new Thread(() -> t.printNumbers());
-        Thread tr = new Thread(()->t.printNumbers());
+//        EvenAndOddNumber t = new  EvenAndOddNumber();
+//        Thread th = new Thread(() -> t.printNumbers());
+//        Thread tr = new Thread(()->t.printNumbers());
+//
+//         th.start();
+//         tr.start();
 
-         th.start();
-         tr.start();
+        Bank b = new Bank(1000);
+        Thread th = new Thread(() -> b.deposit(3000));
+        Thread th2 = new Thread(() -> b.withdraw(500));
 
+        th.start();
+        th2.start();
 
     }
 }
@@ -68,5 +74,47 @@ class EvenAndOddNumber {
 
             System.out.println("Thread interrupted: " + e.getMessage());
         }
+    }
+}
+
+class Bank{
+    double balance;
+
+    public Bank(double balance) {
+        this.balance = balance;
+    }
+
+    void deposit(double amount) {
+        synchronized (Bank.class) {
+            try {
+                if (amount > 0)
+                    balance += amount;
+                System.out.println(
+                        Thread.currentThread().getName()
+                                + " amount: " + amount
+                );
+
+                Thread.sleep(2000);
+            }catch (Exception e){
+
+            }
+
+        }
+    }
+    void withdraw(double amount) {
+         synchronized (Bank.class) {
+             try {
+                 if (amount > 0 && balance >= amount)
+                     balance -= amount;
+                 Thread.sleep(2000);
+                 System.out.println(
+                         Thread.currentThread().getName()
+                                 + " Withdraw " + amount
+                 );
+               }catch (Exception e){
+
+             }
+
+         }
     }
 }
