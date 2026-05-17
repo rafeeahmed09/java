@@ -23,7 +23,7 @@ public class Furture_Callable {
 //        service.shutdown();
 //    }
 
-    static void main(String[] args)  {
+    static void main(String[] args)                   {
         ExecutorService executor = Executors.newFixedThreadPool(2);
            executor.execute(()->{
                int x = 10 / 0;
